@@ -1169,3 +1169,50 @@ code {
 .nav-link:hover {
     text-shadow: 0 0 10px rgba(124, 77, 255, 0.5);
 }
+
+/* ============================================
+   Legal Pages Styling (Impressum & Datenschutz)
+   ============================================ */
+.legal-page {
+    padding: var(--section-padding);
+    min-height: 70vh;
+}
+
+.legal-section {
+    max-width: 800px;
+    margin: 0 auto;
+    background: var(--glass-bg);
+    border: 1px solid var(--glass-border);
+    border-radius: var(--radius-lg);
+    padding: 2rem;
+    backdrop-filter: var(--glass-blur);
+    -webkit-backdrop-filter: var(--glass-blur);
+    box-shadow: var(--shadow-md);
+}
+
+.legal-section h1 {
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+.legal-content {
+    line-height: 1.8;
+}
+
+.legal-content p {
+    margin-bottom: 1rem;
+    color: var(--text-secondary);
+}
+
+.legal-content strong {
+    color: var(--text-primary);
+}
+
+.legal-content a {
+    color: var(--accent-cyan);
+    text-decoration: underline;
+}
+
+.legal-content a:hover {
+    color: var(--accent-purple);
+}
