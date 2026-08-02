@@ -1,0 +1,747 @@
+/* ============================================
+   IdeenGames Website – Responsive Design
+   ============================================
+   
+   Breakpoints:
+   - Mobile: < 768px
+   - Tablet: 768px - 1024px
+   - Desktop: > 1024px
+   
+   ============================================ */
+
+/* ============================================
+   1. Base Responsive Styles
+   ============================================ */
+
+/* Box Sizing für alle Elemente */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/* HTML & Body */
+html {
+    font-size: 16px;
+}
+
+body {
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+/* Container */
+.container {
+    width: 100%;
+    padding: 0 1rem;
+}
+
+/* ============================================
+   2. Mobile First (Default Styles)
+   ============================================ */
+
+/* Navigation */
+.navbar-links {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background: var(--glass-bg);
+    backdrop-filter: var(--glass-blur);
+    -webkit-backdrop-filter: var(--glass-blur);
+    padding: 1rem;
+    gap: 0.5rem;
+    border-bottom: 1px solid var(--glass-border);
+}
+
+.navbar-links.active {
+    display: flex;
+}
+
+.navbar-links li {
+    width: 100%;
+}
+
+.navbar-links .nav-link {
+    display: block;
+    padding: 0.75rem 1rem;
+    border-radius: var(--radius-sm);
+}
+
+.navbar-links .nav-link:hover {
+    background: rgba(124, 77, 255, 0.1);
+}
+
+.mobile-menu-toggle {
+    display: block;
+}
+
+/* Hero Section */
+.hero-content {
+    flex-direction: column;
+    text-align: center;
+    gap: 2rem;
+}
+
+.hero-text {
+    max-width: 100%;
+}
+
+.hero-title {
+    font-size: 2.5rem;
+}
+
+.hero-subtitle {
+    font-size: 1.25rem;
+}
+
+.hero-buttons {
+    flex-direction: column;
+    align-items: center;
+}
+
+.hero-image {
+    width: 100%;
+    max-width: 350px;
+}
+
+.hero-image-placeholder {
+    width: 100%;
+    height: 250px;
+}
+
+/* Server Steps */
+.server-steps {
+    grid-template-columns: 1fr;
+}
+
+.step-card {
+    padding: 1.5rem;
+}
+
+/* Features Grid */
+.features-grid {
+    grid-template-columns: 1fr;
+}
+
+.feature-card {
+    padding: 1.5rem;
+}
+
+/* Galerie Grid */
+.galerie-grid {
+    grid-template-columns: 1fr;
+}
+
+/* Discord Content */
+.discord-content {
+    flex-direction: column;
+}
+
+.discord-widget-container {
+    margin-top: 2rem;
+}
+
+/* Footer */
+.footer-content {
+    flex-direction: column;
+    gap: 1.5rem;
+    text-align: center;
+}
+
+.footer-links {
+    flex-direction: column;
+    gap: 1rem;
+}
+
+/* FAQ */
+.faq-question {
+    flex-direction: column;
+    gap: 0.5rem;
+    align-items: flex-start;
+}
+
+.faq-toggle {
+    align-self: flex-end;
+}
+
+/* ============================================
+   3. Tablet (768px - 1024px)
+   ============================================ */
+@media (min-width: 768px) {
+    html {
+        font-size: 17px;
+    }
+
+    .container {
+        padding: 0 2rem;
+    }
+
+    /* Navigation */
+    .navbar-links {
+        display: flex;
+        flex-direction: row;
+        position: static;
+        width: auto;
+        background: transparent;
+        backdrop-filter: none;
+        -webkit-backdrop-filter: none;
+        padding: 0;
+        gap: 1.5rem;
+        border: none;
+    }
+
+    .mobile-menu-toggle {
+        display: none;
+    }
+
+    /* Hero Section */
+    .hero-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .hero-title {
+        font-size: 3.5rem;
+    }
+
+    .hero-buttons {
+        flex-direction: row;
+    }
+
+    /* Server Steps */
+    .server-steps {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    /* Features Grid */
+    .features-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    /* Galerie Grid */
+    .galerie-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    /* Discord Content */
+    .discord-content {
+        flex-direction: column;
+    }
+
+    /* Footer */
+    .footer-content {
+        flex-direction: row;
+        justify-content: space-between;
+        text-align: left;
+    }
+
+    .footer-links {
+        flex-direction: row;
+    }
+}
+
+/* ============================================
+   4. Desktop (1024px - 1200px)
+   ============================================ */
+@media (min-width: 1024px) {
+    html {
+        font-size: 18px;
+    }
+
+    .container {
+        max-width: 1100px;
+    }
+
+    /* Hero Section */
+    .hero-content {
+        flex-direction: row;
+        text-align: left;
+    }
+
+    .hero-title {
+        font-size: 4rem;
+    }
+
+    .hero-image {
+        max-width: 450px;
+    }
+
+    .hero-image-placeholder {
+        height: 300px;
+    }
+
+    /* Server Steps */
+    .server-steps {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    /* Features Grid */
+    .features-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    /* Galerie Grid */
+    .galerie-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    /* Discord Content */
+    .discord-content {
+        flex-direction: row;
+    }
+
+    .discord-widget-container {
+        margin-top: 0;
+    }
+}
+
+/* ============================================
+   5. Large Desktop (> 1200px)
+   ============================================ */
+@media (min-width: 1200px) {
+    .container {
+        max-width: 1200px;
+    }
+
+    /* Hero Section */
+    .hero-content {
+        gap: 4rem;
+    }
+
+    .hero-title {
+        font-size: 4.5rem;
+    }
+
+    .hero-image {
+        max-width: 500px;
+    }
+
+    .hero-image-placeholder {
+        height: 350px;
+    }
+
+    /* Server Steps */
+    .server-steps {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    /* Features Grid */
+    .features-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    /* Galerie Grid */
+    .galerie-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    /* Section Padding */
+    .server-info,
+    .features,
+    .galerie,
+    .faq,
+    .discord {
+        padding: 120px 0;
+    }
+}
+
+/* ============================================
+   6. Extra Large Desktop (> 1440px)
+   ============================================ */
+@media (min-width: 1440px) {
+    .container {
+        max-width: 1300px;
+    }
+
+    /* Hero Section */
+    .hero-title {
+        font-size: 5rem;
+    }
+
+    /* Galerie Grid */
+    .galerie-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+/* ============================================
+   7. Specific Element Adjustments
+   ============================================ */
+
+/* Navigation Links – Mobile */
+@media (max-width: 767px) {
+    .navbar-links .nav-link {
+        font-size: 1rem;
+        padding: 0.75rem 1rem;
+    }
+
+    .navbar.scrolled .navbar-links {
+        background: var(--bg-secondary);
+    }
+}
+
+/* Hero Buttons – Mobile */
+@media (max-width: 767px) {
+    .btn {
+        width: 100%;
+        max-width: 300px;
+    }
+}
+
+/* Step Cards – Mobile */
+@media (max-width: 767px) {
+    .step-number {
+        width: 30px;
+        height: 30px;
+        font-size: 1rem;
+    }
+
+    .step-content h3 {
+        font-size: 1.125rem;
+    }
+}
+
+/* Feature Cards – Mobile */
+@media (max-width: 767px) {
+    .feature-icon {
+        font-size: 2.5rem;
+    }
+
+    .feature-card h3 {
+        font-size: 1.25rem;
+    }
+}
+
+/* Galerie Items – Mobile */
+@media (max-width: 767px) {
+    .galerie-item {
+        aspect-ratio: 16 / 10;
+    }
+}
+
+/* FAQ – Mobile */
+@media (max-width: 767px) {
+    .faq-question h3 {
+        font-size: 1.125rem;
+    }
+
+    .faq-answer p {
+        font-size: 1rem;
+    }
+}
+
+/* Discord Widget – Mobile */
+@media (max-width: 767px) {
+    #discordWidgetContainer {
+        max-width: 100%;
+    }
+
+    iframe[src*="discord.com/widget"] {
+        width: 100% !important;
+        height: 400px !important;
+    }
+}
+
+/* Footer – Mobile */
+@media (max-width: 767px) {
+    .footer-links a {
+        font-size: 1rem;
+    }
+}
+
+/* Back to Top Button – Mobile */
+@media (max-width: 767px) {
+    .back-to-top {
+        width: 45px;
+        height: 45px;
+        bottom: 1rem;
+        right: 1rem;
+    }
+}
+
+/* Lightbox – Mobile */
+@media (max-width: 767px) {
+    .lightbox-img {
+        max-width: 95%;
+        max-height: 80%;
+    }
+
+    .lightbox-nav {
+        width: 35px;
+        height: 35px;
+    }
+
+    .lightbox-prev {
+        left: 0.5rem;
+    }
+
+    .lightbox-next {
+        right: 0.5rem;
+    }
+}
+
+/* Scroll Indicator – Mobile */
+@media (max-width: 767px) {
+    .scroll-indicator {
+        display: none;
+    }
+}
+
+/* ============================================
+   8. Touch Devices
+   ============================================ */
+
+/* Touch Hover Effects */
+@media (hover: none) and (pointer: coarse) {
+    /* Deaktiviere Hover-Effekte auf Touch-Geräten */
+    .hover-scale:hover,
+    .hover-up:hover,
+    .hover-down:hover,
+    .hover-glow:hover,
+    .hover-border-glow:hover,
+    .hover-text-glow:hover,
+    .hover-rotate:hover,
+    .hover-shake:hover {
+        transform: none;
+        box-shadow: none;
+        text-shadow: none;
+    }
+
+    /* Alternative Effekte für Touch */
+    .step-card,
+    .feature-card,
+    .galerie-item {
+        transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .step-card:active,
+    .feature-card:active,
+    .galerie-item:active {
+        transform: scale(0.98);
+    }
+}
+
+/* ============================================
+   9. High DPI / Retina Displays
+   ============================================ */
+
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+    /* Höhere Auflösung für Logos und Bilder */
+    .logo {
+        image-rendering: -webkit-optimize-contrast;
+        image-rendering: crisp-edges;
+    }
+
+    .galerie-img {
+        image-rendering: auto;
+    }
+}
+
+/* ============================================
+   10. Print Styles
+   ============================================ */
+
+@media print {
+    /* Verstecke nicht benötigte Elemente */
+    .navbar,
+    .animated-background,
+    .scroll-indicator,
+    .back-to-top,
+    .discord-widget-container,
+    .lightbox {
+        display: none !important;
+    }
+
+    /* Hintergrundfarbe für Druck */
+    body {
+        background: white;
+        color: black;
+    }
+
+    /* Textfarbe anpassen */
+    .hero-title,
+    .section-title,
+    h1, h2, h3, h4, h5, h6 {
+        color: black;
+    }
+
+    /* Links */
+    a {
+        color: #0066cc;
+        text-decoration: underline;
+    }
+
+    /* Container */
+    .container {
+        max-width: 100%;
+        padding: 0;
+    }
+
+    /* Bilder */
+    img {
+        max-width: 100%;
+        height: auto;
+    }
+}
+
+/* ============================================
+   11. Reduced Motion
+   ============================================ */
+
+@media (prefers-reduced-motion: reduce) {
+    /* Deaktiviere Animationen für Nutzer mit reduzierter Bewegung */
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+
+    /* Statische Alternativen */
+    .animated-background {
+        background: linear-gradient(135deg, #070B12, #0A0F1A);
+    }
+
+    .bg-layer {
+        display: none;
+    }
+
+    .particles {
+        display: none;
+    }
+
+    /* Scrollbar */
+    ::-webkit-scrollbar-thumb {
+        animation: none;
+    }
+}
+
+/* ============================================
+   12. Dark Mode (System Preference)
+   ============================================ */
+
+@media (prefers-color-scheme: light) {
+    /* Falls Nutzer Light Mode bevorzugt – wir behalten Dark Mode bei */
+    /* Aber wir können eine Warnung oder Option anbieten */
+    body::before {
+        content: "Für beste Erfahrung: Aktiviere Dark Mode in deinen Systemeinstellungen";
+        position: fixed;
+        bottom: 1rem;
+        left: 50%;
+        transform: translateX(-50%);
+        background: rgba(0, 0, 0, 0.9);
+        color: white;
+        padding: 0.5rem 1rem;
+        border-radius: 20px;
+        font-size: 0.875rem;
+        z-index: 10000;
+        display: none; /* Standardmäßig versteckt */
+    }
+}
+
+/* ============================================
+   13. Orientation (Portrait/Landscape)
+   ============================================ */
+
+/* Portrait Mode (Hochformat) */
+@media (orientation: portrait) and (max-width: 767px) {
+    .hero-content {
+        padding-top: 2rem;
+    }
+
+    .hero-title {
+        font-size: 2rem;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+    }
+}
+
+/* Landscape Mode (Querformat) */
+@media (orientation: landscape) and (max-width: 767px) {
+    .hero-content {
+        flex-direction: row;
+        text-align: left;
+    }
+
+    .hero-text {
+        flex: 1;
+    }
+
+    .hero-image {
+        flex: 1;
+        max-width: 250px;
+    }
+
+    .hero-image-placeholder {
+        height: 200px;
+    }
+}
+
+/* ============================================
+   14. Specific Browser Fixes
+   ============================================ */
+
+/* Safari Fixes */
+@supports (-webkit-touch-callout: none) {
+    /* Fix für Safari Scrollbar */
+    body {
+        -webkit-overflow-scrolling: touch;
+    }
+
+    /* Fix für Safari Backdrop Filter */
+    .navbar.scrolled,
+    .step-card,
+    .feature-card,
+    .galerie-item,
+    .lightbox {
+        -webkit-backdrop-filter: blur(10px);
+    }
+}
+
+/* Firefox Fixes */
+@-moz-document url-prefix() {
+    /* Fix für Firefox Scrollbar */
+    html {
+        scrollbar-width: thin;
+        scrollbar-color: var(--accent-purple) var(--bg-primary);
+    }
+
+    /* Fix für Firefox Animationen */
+    @keyframes fadeInUp {
+        from {
+            opacity: 0;
+            transform: translateY(20px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+}
+
+/* Edge/Chrome Fixes */
+@supports (selector(::-webkit-scrollbar)) {
+    /* Scrollbar für WebKit-Browser */
+    ::-webkit-scrollbar {
+        width: 10px;
+    }
+
+    ::-webkit-scrollbar-track {
+        background: var(--bg-primary);
+    }
+
+    ::-webkit-scrollbar-thumb {
+        background: var(--accent-purple);
+        border-radius: 5px;
+    }
+
+    ::-webkit-scrollbar-thumb:hover {
+        background: var(--accent-cyan);
+    }
+}
