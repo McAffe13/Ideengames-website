@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="IdeenGames – Minigames mit Liebe zum Detail. Entdecke unsere einzigartigen Maps und Skript-Systeme auf Cytooxien.net!">
+    <meta name="keywords" content="Minecraft, Minigames, IdeenGames, Cytooxien, Realm, Skript, Maps">
+    <meta name="author" content="IdeenGames">
+    <title>IdeenGames – Minigames mit Liebe zum Detail</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    
+    <!-- Fonts (Google Fonts: Poppins & JetBrains Mono) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    
+    <!-- Discord Widget -->
+    <iframe src="https://discord.com/widget?id=1270047151690481706&theme=dark" 
+            width="350" 
+            height="500" 
+            allowtransparency="true" 
+            frameborder="0" 
+            sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"
+            id="discord-widget"
+            style="display: none;">
+    </iframe>
+</head>
+<body>
+    <!-- Animated Background -->
+    <div class="animated-background">
+        <div class="bg-layer layer-1"></div>
+        <div class="bg-layer layer-2"></div>
+        <div class="bg-layer layer-3"></div>
+        <div class="particles" id="particles"></div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="navbar-container">
+            <a href="#home" class="navbar-logo">
+                <img src="assets/logo.svg" alt="IdeenGames Logo" class="logo">
+                <span class="logo-text">IdeenGames</span>
+            </a>
+            
+            <button class="mobile-menu-toggle" id="mobileMenuToggle" aria-label="Menü öffnen">
+                <span class="hamburger"></span>
+            </button>
+            
+            <ul class="navbar-links" id="navbarLinks">
+                <li><a href="#home" class="nav-link active">Home</a></li>
+                <li><a href="#galerie" class="nav-link">Galerie</a></li>
+                <li><a href="#faq" class="nav-link">FAQ</a></li>
+                <li><a href="#discord" class="nav-link">Discord</a></li>
+                <li><a href="impressum.html" class="nav-link">Impressum</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <div class="hero-text">
+                <h1 class="hero-title">
+                    <span class="title-line">Ideen</span>
+                    <span class="title-line">Games</span>
+                </h1>
+                <p class="hero-subtitle">Minigames mit Liebe zum Detail.</p>
+                <div class="hero-buttons">
+                    <a href="#server-info" class="btn btn-primary btn-glow">
+                        <span class="btn-icon">🎮</span>
+                        Jetzt spielen
+                    </a>
+                    <a href="https://discord.gg/sVFsuaKJCG" 
+                       class="btn btn-secondary btn-glow" 
+                       target="_blank" 
+                       rel="noopener noreferrer">
+                        <span class="btn-icon">💬</span>
+                        Discord
+                    </a>
+                </div>
+            </div>
+            <div class="hero-image">
+                <div class="hero-image-placeholder">
+                    <div class="placeholder-icon">🏰</div>
+                    <p>Minecraft Minigames</p>
+                </div>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <span>Scrollen</span>
+            <div class="scroll-arrow"></div>
+        </div>
+    </section>
+
+    <!-- Server Info Section -->
+    <section class="server-info" id="server-info">
+        <div class="container">
+            <h2 class="section-title">Wie kannst du mitspielen?</h2>
+            <div class="server-steps">
+                <div class="step-card" data-aos="fade-up">
+                    <div class="step-number">1</div>
+                    <div class="step-content">
+                        <h3>Minecraft starten</h3>
+                        <p>Öffne Minecraft Java Edition (Version 1.21.11+).</p>
+                    </div>
+                </div>
+                <div class="step-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="step-number">2</div>
+                    <div class="step-content">
+                        <h3>Cytooxien.net betreten</h3>
+                        <p>Verbinde dich mit dem Server <code>cytooxien.net</code>.</p>
+                    </div>
+                </div>
+                <div class="step-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="step-number">3</div>
+                    <div class="step-content">
+                        <h3>Realm-Kompass öffnen</h3>
+                        <p>Drücke <code>F3 + G</code> oder nutze den Realm-Kompass.</p>
+                    </div>
+                </div>
+                <div class="step-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="step-number">4</div>
+                    <div class="step-content">
+                        <h3>IdeenGames auswählen</h3>
+                        <p>Wähle den Realm <strong>IdeenGames</strong> aus der Liste aus.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features" id="features">
+        <div class="container">
+            <h2 class="section-title">Was macht IdeenGames besonders?</h2>
+            <div class="features-grid">
+                <div class="feature-card" data-aos="slide-up">
+                    <div class="feature-icon">🗺️</div>
+                    <h3>Eigene Maps</h3>
+                    <p>Unsere Maps werden speziell für IdeenGames erstellt oder individuell angepasst. Jede Map ist ein Unikat!</p>
+                </div>
+                <div class="feature-card" data-aos="slide-up" data-aos-delay="100">
+                    <div class="feature-icon">📜</div>
+                    <h3>Eigene Skript-Systeme</h3>
+                    <p>Alles auf IdeenGames basiert auf selbst geschriebenen Skripten – keine Plugins, nur pure Kreativität.</p>
+                </div>
+                <div class="feature-card" data-aos="slide-up" data-aos-delay="200">
+                    <div class="feature-icon">🔄</div>
+                    <h3>Regelmäßige Updates</h3>
+                    <p>Wir arbeiten ständig an neuen Inhalten und Verbesserungen, um das Spielerlebnis zu optimieren.</p>
+                </div>
+                <div class="feature-card" data-aos="slide-up" data-aos-delay="300">
+                    <div class="feature-icon">👥</div>
+                    <h3>Community-Mitbestimmung</h3>
+                    <p>Die Community stimmt regelmäßig über neue Maps und Inhalte ab. Deine Stimme zählt!</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Galerie Section -->
+    <section class="galerie" id="galerie">
+        <div class="container">
+            <h2 class="section-title">Galerie</h2>
+            <div class="galerie-grid">
+                <div class="galerie-item" data-aos="zoom-in">
+                    <img src="assets/images/galerie-1.jpg" 
+                         alt="IdeenGames Map 1" 
+                         class="galerie-img lazy" 
+                         data-src="assets/images/galerie-1.jpg">
+                    <div class="galerie-overlay">
+                        <span class="galerie-caption">Map: SkyWars</span>
+                        <button class="galerie-zoom" aria-label="Bild vergrößern">🔍</button>
+                    </div>
+                </div>
+                <div class="galerie-item" data-aos="zoom-in" data-aos-delay="100">
+                    <img src="assets/images/galerie-2.jpg" 
+                         alt="IdeenGames Map 2" 
+                         class="galerie-img lazy" 
+                         data-src="assets/images/galerie-2.jpg">
+                    <div class="galerie-overlay">
+                        <span class="galerie-caption">Map: BedWars</span>
+                        <button class="galerie-zoom" aria-label="Bild vergrößern">🔍</button>
+                    </div>
+                </div>
+                <div class="galerie-item" data-aos="zoom-in" data-aos-delay="200">
+                    <img src="assets/images/galerie-3.jpg" 
+                         alt="IdeenGames Map 3" 
+                         class="galerie-img lazy" 
+                         data-src="assets/images/galerie-3.jpg">
+                    <div class="galerie-overlay">
+                        <span class="galerie-caption">Map: Parkour</span>
+                        <button class="galerie-zoom" aria-label="Bild vergrößern">🔍</button>
+                    </div>
+                </div>
+                <div class="galerie-item" data-aos="zoom-in" data-aos-delay="300">
+                    <img src="assets/images/galerie-4.jpg" 
+                         alt="IdeenGames Map 4" 
+                         class="galerie-img lazy" 
+                         data-src="assets/images/galerie-4.jpg">
+                    <div class="galerie-overlay">
+                        <span class="galerie-caption">Map: BuildBattle</span>
+                        <button class="galerie-zoom" aria-label="Bild vergrößern">🔍</button>
+                    </div>
+                </div>
+                <div class="galerie-item" data-aos="zoom-in" data-aos-delay="400">
+                    <img src="assets/images/galerie-5.jpg" 
+                         alt="IdeenGames Map 5" 
+                         class="galerie-img lazy" 
+                         data-src="assets/images/galerie-5.jpg">
+                    <div class="galerie-overlay">
+                        <span class="galerie-caption">Map: MurderMystery</span>
+                        <button class="galerie-zoom" aria-label="Bild vergrößern">🔍</button>
+                    </div>
+                </div>
+                <div class="galerie-item" data-aos="zoom-in" data-aos-delay="500">
+                    <img src="assets/images/galerie-6.jpg" 
+                         alt="IdeenGames Map 6" 
+                         class="galerie-img lazy" 
+                         data-src="assets/images/galerie-6.jpg">
+                    <div class="galerie-overlay">
+                        <span class="galerie-caption">Map: Duels</span>
+                        <button class="galerie-zoom" aria-label="Bild vergrößern">🔍</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Lightbox -->
+    <div class="lightbox" id="lightbox">
+        <button class="lightbox-close" id="lightboxClose" aria-label="Schließen">✕</button>
+        <button class="lightbox-nav lightbox-prev" id="lightboxPrev" aria-label="Vorheriges Bild">❮</button>
+        <button class="lightbox-nav lightbox-next" id="lightboxNext" aria-label="Nächstes Bild">❯</button>
+        <img src="" alt="Galerie-Bild" class="lightbox-img" id="lightboxImg">
+        <p class="lightbox-caption" id="lightboxCaption"></p>
+    </div>
+
+    <!-- FAQ Section -->
+    <section class="faq" id="faq">
+        <div class="container">
+            <h2 class="section-title">Häufig gestellte Fragen</h2>
+            <div class="faq-grid">
+                <div class="faq-item" data-aos="fade-right">
+                    <div class="faq-question">
+                        <h3>Ist IdeenGames kostenlos?</h3>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Ja, IdeenGames ist komplett kostenlos. Du brauchst nur eine gültige Minecraft Java Edition.</p>
+                    </div>
+                </div>
+                <div class="faq-item" data-aos="fade-right" data-aos-delay="100">
+                    <div class="faq-question">
+                        <h3>Brauche ich Mods?</h3>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Nein, du brauchst keine Mods. IdeenGames läuft mit Vanilla Minecraft.</p>
+                    </div>
+                </div>
+                <div class="faq-item" data-aos="fade-right" data-aos-delay="200">
+                    <div class="faq-question">
+                        <h3>Welche Version?</h3>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>IdeenGames unterstützt Minecraft Java Edition <strong>1.21.11 und höher</strong>.</p>
+                    </div>
+                </div>
+                <div class="faq-item" data-aos="fade-right" data-aos-delay="300">
+                    <div class="faq-question">
+                        <h3>Wie melde ich Bugs?</h3>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Du kannst Bugs und Feedback über unseren <a href="https://discord.gg/sVFsuaKJCG" target="_blank" rel="noopener noreferrer">Discord-Server</a> melden.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Discord Section -->
+    <section class="discord" id="discord">
+        <div class="container">
+            <h2 class="section-title">Unser Discord</h2>
+            <div class="discord-content">
+                <div class="discord-info" data-aos="fade-right">
+                    <p>Tritt unserer Community bei und bleibe auf dem Laufenden über neue Maps, Updates und Events!</p>
+                    <div class="discord-stats">
+                        <div class="discord-status">
+                            <span class="status-dot online"></span>
+                            <span id="discordMemberCount">0 Mitglieder online</span>
+                        </div>
+                    </div>
+                    <a href="https://discord.gg/sVFsuaKJCG" 
+                       class="btn btn-discord btn-glow" 
+                       target="_blank" 
+                       rel="noopener noreferrer">
+                        <span class="btn-icon">💬</span>
+                        Discord beitreten
+                    </a>
+                </div>
+                <div class="discord-widget-container" data-aos="fade-left">
+                    <div id="discordWidgetContainer"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <img src="assets/logo.svg" alt="IdeenGames Logo" class="logo">
+                    <span class="logo-text">IdeenGames</span>
+                </div>
+                <div class="footer-links">
+                    <a href="impressum.html">Impressum</a>
+                    <a href="datenschutz.html">Datenschutz</a>
+                    <a href="https://discord.gg/sVFsuaKJCG" target="_blank" rel="noopener noreferrer">Discord</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 IdeenGames. Alle Rechte vorbehalten.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button class="back-to-top" id="backToTop" aria-label="Nach oben">↑</button>
+
+    <!-- JavaScript -->
+    <script src="js/script.js"></script>
+</body>
+</html>
